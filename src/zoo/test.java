@@ -21,16 +21,18 @@ public class test extends Animal    {
 
 
         Scanner scan = new Scanner(System.in);
-
-        for(int i =0;i<2;i++){
+        System.out.println("Ile zwierząt chcesz dodać? ");
+        int a=scan.nextInt();
+        for(int i =0;i<a;i++){
 Animal animal = zooBuilder.Create();
            zwierz.add(animal);
        }
-
+        System.out.println("\n\n");
         for(Animal el:zwierz) {
             System.out.println("-----------------------------------");
             System.out.println(el.toString());
             System.out.println(el.type);
+            System.out.println(el.Sound());
         }
 
 
